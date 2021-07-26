@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  gatewayapi:
+    image: ${DOCKER_REGISTRY-}gatewayapi
+    build:
+      context: .
+      dockerfile: GatewayApi/Dockerfile
+
+  gatewayapi.background:
+    image: ${DOCKER_REGISTRY-}gatewayapibackground
+    build:
+      context: .
+      dockerfile: GatewayApi.Background/Dockerfile
+
